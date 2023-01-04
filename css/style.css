@@ -1,0 +1,217 @@
+body {
+    background-color: #121212;
+}
+h1 {
+    color: white;
+    font-family: 'Noto Serif', serif;
+    font-weight: 400;
+    font-size: 4.9rem;
+    margin-bottom: 25px;
+    margin-left: 75px;
+}
+h2 {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 75px;
+    margin-right: 15%;
+}
+h3 {
+    color: white;
+    font-family: 'Noto Serif', serif;
+    font-weight: 400;
+    font-size: 2.75rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10%;
+}
+p {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+a {
+    color: #00853E;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+button { /* nav and footer */
+    background-color: transparent;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #FDFDFC;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 0px;
+}
+.header { /* not a class, but removing period causes overlap of next elements on page */ 
+    background-image: url("/images/gradient.png"), url("/images/membership\ hero\ image.png"); /* WHAT IS HAPPENING HERE!? background image not working */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    max-height: 500px;
+  }
+.global-nav {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    margin-left: 70%;
+    margin-right: 30px;
+    justify-content: flex-end;
+    justify-content: space-between;
+}
+.calendar {
+    height: 1.5em;
+}
+.searchbar {
+    display: flex;
+    padding: 5px 60px 5px;
+    background-color: #273138
+    ;
+    border-radius: 5px;
+    justify-content: flex-end; /* trying to get the search icon to the right of the box but doesn't work */
+}
+nav {
+    margin-left: 25px;
+}
+.heroBox {
+    /* From https://css.glass NOT WORKING!! supposed to be the blurred glass box around the text on top of the image... 
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); */
+    background-color: #121212;
+}
+.heroText {
+    /* WHY CAN'T I GET THIS TO BE DIFFERENT */
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+    padding-right: 25%;
+}
+.button:hover {
+    border-bottom: 3px solid white;
+    transition: 0.5s;
+}
+.whiteButton {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #202020;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px 30px 5px;
+}
+.green-button {
+    background-color: #3A844A;
+    border-radius: 5px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #FDFDFC;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    padding: .5em 2.5em .5em;
+}
+ul {
+    list-style-type: none;
+    margin-left: 75px;
+    align-items: center;
+}
+.cards {
+    margin: 25px 40px 25px; /* top leftright bottom */
+    background-color: #1a1a1a;
+    border-radius: 5px;
+    width: auto;
+    height: fit-content;
+    display: grid; 
+    grid-template-columns: 33% 67%; /* why can't i get the text and selections part to be centered in the gray div?? */
+    grid-template-rows: 9fr 1fr;
+    grid-template-areas: 
+        "card-image details"
+        "card-image card-selections";
+    align-items: center;
+    padding: 10px auto 10px;
+}
+.card-image {
+    background-color: #00853E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15em;
+    width: 15em;
+    border-radius: 5px;
+    margin: 20px 20px 20px; /* top right bottom left |OR| top r/l bottom |OR| t/b l/r */
+    grid-area: card-image;
+}
+.pricing {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20%;
+}
+.details {
+    list-style-type: disc;
+    font-family: 'nunito sans', sans-serif;
+    color: white;
+    margin-left: -20px;
+    grid-area: details;
+}
+.card-selections {
+    display:flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    grid-area: card-selections;
+}
+.frequency-selector { /* need to figure out size and hover and spacing with label but got stuck*/
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    font-size: 1em;
+    font-weight: 700;
+}
+.cardtext {
+    font-size: 15px;
+    font-family: 'nunito sans', sans-serif;
+    color: white;
+    margin-right: 25px;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+hr {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+}
+.logos {
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
